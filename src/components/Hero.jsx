@@ -4,7 +4,7 @@ import { InteractiveDotGrid } from './InteractiveDotGrid';
 
 export function Hero() {
     return (
-        <section className="relative pt-32 pb-28 text-white overflow-hidden">
+        <section className="relative pt-24 pb-16 md:pt-32 md:pb-28 text-white overflow-hidden">
             {/* Interactive Dot Grid Background */}
             <InteractiveDotGrid />
 

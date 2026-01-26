@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export function Delivery() {
     return (
-        <section className="py-28 bg-white dark:bg-gray-900 overflow-hidden">
+        <section className="py-16 md:py-28 bg-white dark:bg-gray-900 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid md:grid-cols-2 gap-16 items-center">
 

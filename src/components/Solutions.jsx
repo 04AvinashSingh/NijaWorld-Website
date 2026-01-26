@@ -68,7 +68,7 @@ export function Solutions() {
     ];
 
     return (
-        <section className="py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-baseDark overflow-hidden">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-baseDark overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}
@@ -95,10 +95,18 @@ export function Solutions() {
                         <motion.div
                             key={idx}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                transition: { delay: solution.delay, duration: 0.5 }
+                            }}
                             viewport={{ once: true }}
-                            transition={{ delay: solution.delay, duration: 0.5 }}
-                            whileHover={{ y: -5, scale: 1.01 }}
+                            transition={{ duration: 0.3, ease: 'easeOut' }}
+                            whileHover={{
+                                y: -5,
+                                scale: 1.01,
+                                transition: { duration: 0.2, delay: 0 }
+                            }}
                             className={`group relative flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[380px] p-8 bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-${solution.baseColor}/20 hover:border-${solution.baseColor}/50`}
                         >
                             {/* Icon */}
