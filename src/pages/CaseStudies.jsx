@@ -1,40 +1,40 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 export default function CaseStudies() {
     const caseStudies = [
         {
-            industry: "FinTech",
-            problem: "Scaling secure transaction processing",
-            implementation: "Designed and deployed a high-throughput, fault-tolerant payment API",
-            metrics: [
-                { value: "3×", label: "throughput increase" },
-                { value: "99.99%", label: "uptime under peak load" }
-            ]
+            id: 1,
+            category: "PRIVATE CREDIT",
+            title: "Liquidity Enablement for Tokenised Private Credit Notes",
+            description: "Transforming private credit markets through institutional-grade tokenisation and liquidity infrastructure.",
+            industry: "Financial Services / Private Credit",
+            kpiHighlight: "Reduced settlement cycle by 30–55%",
+            tags: ["RWA Liquidity", "Tokenisation", "Governance", "Reporting"],
+            icon: "💎",
+            gradientFrom: "from-nijaGreen/20",
+            gradientTo: "to-nijaPurple/20",
+            link: "/case-studies/rwa-liquidity-private-credit-notes"
         },
         {
-            industry: "Healthcare",
-            problem: "Patient data compliance and interoperability",
-            implementation: "Built HIPAA-compliant blockchain-based medical record system with cross-platform integration",
-            metrics: [
-                { value: "100%", label: "audit compliance" },
-                { value: "250K+", label: "patient records secured" }
-            ]
-        },
-        {
-            industry: "Supply Chain",
-            problem: "End-to-end shipment tracking and verification",
-            implementation: "Deployed distributed ledger for real-time tracking and automated smart contract verification",
-            metrics: [
-                { value: "87%", label: "reduction in disputes" },
-                { value: "48hrs", label: "faster settlement time" }
-            ]
+            id: 2,
+            category: "REAL ESTATE",
+            title: "Controlled Liquidity for Tokenised Real Estate Cashflow Entitlements",
+            description: "Enabling controlled secondary markets for tokenised real estate cashflow rights with investor protections.",
+            industry: "Real Estate / Investment Operations",
+            kpiHighlight: "Reduced admin overhead by 20–40%",
+            tags: ["RWA Liquidity", "Governance", "Investor Controls", "Reporting"],
+            icon: "🏛️",
+            gradientFrom: "from-nijaPurple/20",
+            gradientTo: "to-nijaGreen/20",
+            link: "/case-studies/rwa-liquidity-real-estate-cashflows"
         }
     ];
 
     return (
-        <div className='min-h-screen bg-white dark:bg-baseDark dark:text-white'>
+        <div className='min-h-screen bg-gray-50 dark:bg-baseDark dark:text-white'>
             <Navbar />
 
             {/* Hero Section */}
@@ -46,7 +46,7 @@ export default function CaseStudies() {
                         transition={{ duration: 0.6 }}
                         className="text-center mb-4"
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                             Proven delivery in real environments
                         </h1>
                     </motion.div>
@@ -56,51 +56,73 @@ export default function CaseStudies() {
             {/* Featured Case Studies Grid */}
             <section className="py-16 px-6">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                         {caseStudies.map((study, index) => (
                             <motion.div
-                                key={index}
+                                key={study.id}
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-8 hover:border-nijaGreen dark:hover:border-nijaGreen transition-all duration-300 group"
+                                transition={{ duration: 0.5, delay: index * 0.15 }}
+                                className={`relative bg-white dark:bg-gray-900 rounded-2xl p-8 overflow-hidden group transition-all duration-500 ${study.id === 1
+                                    ? 'hover:shadow-[0_0_40px_rgba(0,255,157,0.4)] dark:hover:shadow-[0_0_40px_rgba(0,255,157,0.3)]'
+                                    : 'hover:shadow-[0_0_40px_rgba(138,43,226,0.4)] dark:hover:shadow-[0_0_40px_rgba(138,43,226,0.3)]'
+                                    }`}
                             >
-                                {/* Industry + Problem */}
-                                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                                    <span className="text-nijaGreen">{study.industry}</span> — {study.problem}
-                                </h3>
+                                {/* Gradient Overlay Background */}
+                                <div className={`absolute inset-0 bg-gradient-to-br ${study.gradientFrom} ${study.gradientTo} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                                <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${study.gradientFrom} ${study.gradientTo} blur-3xl opacity-30`}></div>
+                                <div className={`absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr ${study.gradientTo} ${study.gradientFrom} blur-3xl opacity-20`}></div>
 
-                                {/* What We Implemented */}
-                                <div className="mb-6">
-                                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">
-                                        What We Implemented
+                                {/* Content */}
+                                <div className="relative z-10">
+                                    {/* Top Section: Category Label */}
+                                    <div className="flex items-center justify-between mb-6">
+                                        <span className="text-xs font-bold tracking-widest text-gray-500 dark:text-gray-400 uppercase">
+                                            {study.category}
+                                        </span>
+                                    </div>
+
+                                    {/* Icon */}
+                                    <div className="w-14 h-14 mb-4 flex items-center justify-center text-4xl bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                                        {study.icon}
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white leading-tight">
+                                        {study.title}
+                                    </h3>
+
+                                    {/* Description */}
+                                    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                                        {study.description}
                                     </p>
-                                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                                        {study.implementation}
+
+                                    {/* KPI Highlight - Subtle emphasis */}
+                                    <p className="text-sm italic text-gray-500 dark:text-gray-500 mb-6">
+                                        {study.kpiHighlight}
                                     </p>
+
+                                    {/* Bottom Section: CTA */}
+                                    <div className="flex justify-center pt-4">
+                                        {study.link ? (
+                                            <Link to={study.link}>
+                                                <button className={`${study.id === 1
+                                                    ? 'bg-nijaGreen hover:bg-green-500 shadow-nijaGreen/30 hover:shadow-nijaGreen/50'
+                                                    : 'bg-nijaPurple hover:bg-purple-600 shadow-nijaPurple/30 hover:shadow-nijaPurple/50'
+                                                    } text-white px-8 py-3.5 text-base rounded-full font-medium transition shadow-lg transform hover:scale-105`}>
+                                                    View Case
+                                                </button>
+                                            </Link>
+                                        ) : (
+                                            <button className={`${study.id === 1
+                                                ? 'bg-nijaGreen hover:bg-green-500 shadow-nijaGreen/30 hover:shadow-nijaGreen/50'
+                                                : 'bg-nijaPurple hover:bg-purple-600 shadow-nijaPurple/30 hover:shadow-nijaPurple/50'
+                                                } text-white px-8 py-3.5 text-base rounded-full font-medium transition shadow-lg transform hover:scale-105`}>
+                                                View Case
+                                            </button>
+                                        )}
+                                    </div>
                                 </div>
-
-                                {/* Result Metrics */}
-                                <div className="mb-6 space-y-3">
-                                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">
-                                        Results
-                                    </p>
-                                    {study.metrics.map((metric, idx) => (
-                                        <div key={idx} className="flex items-baseline gap-2">
-                                            <span className="text-3xl font-bold text-nijaGreen">
-                                                {metric.value}
-                                            </span>
-                                            <span className="text-sm text-gray-600 dark:text-gray-400">
-                                                {metric.label}
-                                            </span>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* CTA */}
-                                <button className="w-full bg-nijaGreen hover:bg-green-500 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg shadow-nijaGreen/30 hover:shadow-nijaGreen/50 group-hover:scale-105 transform">
-                                    Read Case Study
-                                </button>
                             </motion.div>
                         ))}
                     </div>
