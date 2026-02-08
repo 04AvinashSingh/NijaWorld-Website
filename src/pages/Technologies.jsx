@@ -23,14 +23,23 @@ export default function Technologies() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="pt-32 pb-20 bg-gradient-to-br from-[#0B0F14] via-[#141B28] to-[#0B0F14] text-white">
-                <div className="max-w-7xl mx-auto px-6">
+            <section className="relative pt-32 pb-20 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src={aiWorkflowImg}
+                        alt="Technologies Background"
+                        className="w-full h-full object-cover opacity-80"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F14] via-[#141B28]/90 to-[#0B0F14]" />
+                </div>
+
+                <div className="relative z-10 max-w-7xl mx-auto px-6">
                     <div className="max-w-3xl">
                         <motion.h1
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4 }}
-                            className="text-5xl font-bold mb-6 font-heading"
+                            className="text-5xl font-bold mb-6 font-heading text-white"
                         >
                             Technologies built for enterprise-scale trust
                         </motion.h1>
@@ -150,7 +159,6 @@ export default function Technologies() {
                                 >
                                     <span className="relative">
                                         {pillar.cta}
-                                        <span className="absolute left-0 bottom-0 w-full h-[1px] bg-white transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-200 origin-left" />
                                     </span>
                                     <svg
                                         className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-200"
