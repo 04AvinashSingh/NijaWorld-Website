@@ -4,6 +4,8 @@ import About from './pages/About';
 import AIPage from './pages/AIPage';
 import BlockchainPage from './pages/BlockchainPage';
 import CaseStudies from './pages/CaseStudies';
+import CaseStudyPrivateCredit from './pages/CaseStudyPrivateCredit';
+import CaseStudyRealEstate from './pages/CaseStudyRealEstate';
 import Contact from './pages/Contact';
 import CybersecurityPage from './pages/CybersecurityPage';
 import Home from './pages/Home';
@@ -34,6 +36,8 @@ function App() {
         <Route path='/solutions' element={<SolutionsPage />} />
         <Route path='/solutions/rwa-liquidity' element={<RWALiquidityPage />} />
         <Route path='/case-studies' element={<CaseStudies />} />
+        <Route path='/case-studies/rwa-liquidity-private-credit-notes' element={<CaseStudyPrivateCredit />} />
+        <Route path='/case-studies/rwa-liquidity-real-estate-cashflows' element={<CaseStudyRealEstate />} />
         <Route path='/insights' element={<Insights />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/join' element={<Join />} />
