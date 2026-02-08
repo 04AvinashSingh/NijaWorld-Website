@@ -10,7 +10,8 @@ export function CaseStudies() {
             industry: 'Financial Services / Private Credit',
             kpiHighlight: 'Reduced settlement cycle by 30–55%',
             tags: ['RWA Liquidity', 'Tokenisation', 'Governance', 'Reporting'],
-            icon: Banknote
+            icon: Banknote,
+            link: '/case-studies/rwa-liquidity-private-credit-notes'
         },
         {
             title: 'Controlled Liquidity for Tokenised Real Estate Cashflow Entitlements',
@@ -18,7 +19,8 @@ export function CaseStudies() {
             industry: 'Real Estate / Investment Operations',
             kpiHighlight: 'Reduced admin overhead by 20–40%',
             tags: ['RWA Liquidity', 'Governance', 'Investor Controls', 'Reporting'],
-            icon: Building2
+            icon: Building2,
+            link: '/case-studies/rwa-liquidity-real-estate-cashflows'
         }
     ];
 
@@ -99,7 +101,7 @@ export function CaseStudies() {
 
                             {/* CTA Button */}
                             <Link
-                                to="/case-studies"
+                                to={study.link}
                                 className="w-full px-6 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 bg-nijaGreen/10 hover:bg-nijaGreen text-nijaGreen hover:text-white border border-nijaGreen/30 hover:shadow-lg hover:shadow-nijaGreen/50"
                             >
                                 Read Case Study <ArrowRight size={18} />
