@@ -75,9 +75,10 @@ export default function SolutionsPage() {
                     <img
                         src={solutionim2}
                         alt="Enterprise Solutions Background"
-                        className="w-full h-full object-cover opacity-30"
+                        className="w-full h-full object-cover opacity-70"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F14]/90 via-[#141B28]/85 to-[#0B0F14]/90" />
+                    {/* Dark gradient overlay to make text pop */}
+                    <div className="absolute inset-0 bg-black/40" />
                 </div>
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -86,7 +87,7 @@ export default function SolutionsPage() {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4 }}
-                            className="text-5xl font-bold mb-6 font-heading"
+                            className="text-5xl font-bold mb-6 font-heading text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                         >
                             Solutions designed for enterprise deployment
                         </motion.h1>
@@ -94,7 +95,7 @@ export default function SolutionsPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.4, delay: 0.1 }}
-                            className="text-xl text-gray-300 leading-relaxed font-body"
+                            className="text-xl text-white leading-relaxed font-body drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
                         >
                             Practical implementations that integrate with existing systems and governance models.
                         </motion.p>
