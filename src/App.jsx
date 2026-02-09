@@ -39,7 +39,6 @@ import SolutionsPage from './pages/SolutionsPage';
 import SupplyChainPage from './pages/SupplyChainPage';
 import SupplyChainTraceabilityArticle from './pages/SupplyChainTraceabilityArticle';
 import Technologies from './pages/Technologies';
-import TokenisationPage from './pages/TokenisationPage';
 import TokenisedLoyaltyArticle from './pages/TokenisedLoyaltyArticle';
 import VerifiableIdentityArticle from './pages/VerifiableIdentityArticle';
 import Blogs from './pages/Blogs';

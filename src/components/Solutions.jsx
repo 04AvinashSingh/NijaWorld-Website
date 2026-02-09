@@ -81,7 +81,7 @@ export function Solutions() {
 
     return (
         <section className="pt-4 pb-16 md:pt-6 md:pb-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-baseDark overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
                 {/* Header */}
                 <motion.div
@@ -93,7 +93,7 @@ export function Solutions() {
                     <span className="inline-block mb-6 px-8 py-3 text-2xl rounded-full bg-nijaGreen/10 text-nijaGreen font-bold tracking-wide border border-nijaGreen/20">
                         Industry Solutions
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
                         Solutions designed for enterprise deployment
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
@@ -102,7 +102,7 @@ export function Solutions() {
                 </motion.div>
 
                 {/* Solutions Grid - Flexbox for 3-then-2 centering */}
-                <div className="flex flex-wrap justify-center gap-8 mb-16">
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
                     {solutions.map((solution, idx) => (
                         <motion.div
                             key={idx}

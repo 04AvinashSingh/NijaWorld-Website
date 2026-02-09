@@ -26,22 +26,22 @@ export function CaseStudies() {
 
     return (
         <section className="pt-8 pb-28 bg-gray-50 dark:bg-baseDark">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
-                    <span className="inline-block mb-6 px-8 py-3 text-2xl rounded-full bg-nijaGreen/10 text-nijaGreen font-bold tracking-wide border border-nijaGreen/20">
+                    <span className="inline-block mb-4 md:mb-6 px-4 md:px-8 py-2 md:py-3 text-lg md:text-2xl rounded-full bg-nijaGreen/10 text-nijaGreen font-bold tracking-wide border border-nijaGreen/20">
                         Proven Results
                     </span>
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
                         Proven delivery in real environments
                     </h2>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+                <div className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto mb-8 md:mb-12">
                     {studies.map((study, idx) => (
                         <motion.div
                             key={idx}

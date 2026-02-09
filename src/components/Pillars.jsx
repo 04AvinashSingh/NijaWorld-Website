@@ -76,7 +76,7 @@ export function Pillars() {
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.5, duration: 0.6, ease: "easeInOut" }}
-                        className="inline-block mb-10 px-6 py-3 text-2xl rounded-full bg-nijaGreen/20 text-white font-bold border-2 border-white"
+                        className="inline-block mb-6 md:mb-10 px-4 md:px-6 py-2 md:py-3 text-lg md:text-2xl rounded-full bg-nijaGreen/20 text-gray-800 dark:text-white font-bold border-2 border-gray-800 dark:border-white"
                     >
                         Three Enterprise Pillars
                     </motion.span>
@@ -88,7 +88,7 @@ export function Pillars() {
                             duration: 0.8,
                             ease: "easeInOut"
                         }}
-                        className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+                        className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 px-4 md:px-0"
                     >
                         The Foundation of Modern Enterprise
                     </motion.h2>
@@ -100,7 +100,7 @@ export function Pillars() {
                             duration: 0.8,
                             ease: "easeInOut"
                         }}
-                        className="text-slate-300 max-w-2xl mx-auto text-lg"
+                        className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto text-lg"
                     >
                         A unified approach combining practical AI with trusted blockchain infrastructure.
                     </motion.p>
@@ -109,10 +109,10 @@ export function Pillars() {
 
             {/* Pillar Cards Section */}
             <section className="bg-gradient-to-b from-gray-50 to-white dark:from-baseDark dark:to-gray-900">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
                     {/* Pillar Cards */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                         {pillars.map((pillar, index) => {
                             // Interactive AI Card Component
                             const AIInteractiveCard = () => {
