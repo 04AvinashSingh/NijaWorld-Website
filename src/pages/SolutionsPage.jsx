@@ -8,6 +8,7 @@ import infrastructureImg from '../assets/images/ai/infrastructure.png';
 import auditImg from '../assets/images/blockchain/audit.png';
 import tokenisationImg from '../assets/images/blockchain/tokenisation.png';
 import identityImg from '../assets/images/cybersecurity/identity.png';
+import solutionim2 from '../assets/solutionim2.png';
 import { AnimatedPageBackground } from '../components/AnimatedPageBackground';
 
 export default function SolutionsPage() {
@@ -16,31 +17,36 @@ export default function SolutionsPage() {
             title: 'Tokenisation',
             outcome: 'Launch compliant tokenised assets and workflows',
             bullets: ['Governance controls', 'Issuance & lifecycle', 'Reporting & auditability'],
-            image: tokenisationImg
+            image: tokenisationImg,
+            link: '/solutions/tokenisation'
         },
         {
             title: 'Supply Chain Solution',
             outcome: 'Improve visibility and reduce disputes with end-to-end traceability',
             bullets: ['Provenance ledger', 'Event tracking', 'Partner reconciliation'],
-            image: auditImg
+            image: auditImg,
+            link: '/solutions/supply-chain'
         },
         {
             title: 'Identity Management',
             outcome: 'Secure identity and access with verifiable credentials',
             bullets: ['KYC/KYB-ready', 'Role-based control', 'Fraud reduction'],
-            image: identityImg
+            image: identityImg,
+            link: '/solutions/identity'
         },
         {
             title: 'Loyalty Solution',
             outcome: 'Build modern loyalty programs with transparent rewards and engagement',
             bullets: ['Token-based rewards', 'Personalisation', 'Analytics & controls'],
-            image: automationImg
+            image: automationImg,
+            link: '/solutions/loyalty'
         },
         {
             title: 'Digital Assets Investment Advisory',
             outcome: 'Institutional-grade advisory and strategy for digital asset exposure',
             bullets: ['Risk framework', 'Governance', 'Reporting-ready outputs'],
-            image: infrastructureImg
+            image: infrastructureImg,
+            link: '/solutions/advisory'
         },
         {
             title: 'RWA Liquidity',
@@ -63,8 +69,18 @@ export default function SolutionsPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="pt-32 pb-20 bg-gradient-to-br from-[#0B0F14] via-[#141B28] to-[#0B0F14] text-white">
-                <div className="max-w-7xl mx-auto px-6">
+            <section className="pt-32 pb-20 bg-gradient-to-br from-[#0B0F14] via-[#141B28] to-[#0B0F14] text-white relative overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src={solutionim2}
+                        alt="Enterprise Solutions Background"
+                        className="w-full h-full object-cover opacity-30"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F14]/90 via-[#141B28]/85 to-[#0B0F14]/90" />
+                </div>
+
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="max-w-3xl">
                         <motion.h1
                             initial={{ opacity: 0, y: 10 }}
@@ -106,13 +122,13 @@ export default function SolutionsPage() {
                                 >
                                     <CardWrapper
                                         {...cardProps}
-                                        className="block h-full group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-b-nijaGreen dark:hover:border-b-nijaGreen hover:shadow-2xl hover:shadow-nijaGreen/10 transition-all duration-200 cursor-pointer relative overflow-hidden"
+                                        className="block h-full group bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-900 border-2 border-gray-200 dark:border dark:border-gray-800 rounded-xl p-6 hover:border-nijaGreen dark:hover:border-nijaGreen shadow-lg shadow-gray-200/50 hover:shadow-xl hover:shadow-nijaGreen/30 dark:shadow-none transition-all duration-200 cursor-pointer relative overflow-hidden"
                                     >
-                                        <div className="absolute top-0 right-0 w-32 h-32 bg-nijaGreen/5 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100" />
+                                        <div className="absolute top-0 right-0 w-32 h-32 hidden dark:block bg-nijaGreen/5 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100" />
 
                                         {solution.image && (
                                             <div className="mb-6 -mx-6 -mt-6 h-40 relative overflow-hidden rounded-t-xl group-hover:h-44 transition-all duration-300">
-                                                <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent to-transparent z-10 opacity-80" />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-gray-50 dark:from-gray-900 via-transparent to-transparent z-10" />
                                                 <img
                                                     src={solution.image}
                                                     alt={solution.title}
@@ -135,6 +151,16 @@ export default function SolutionsPage() {
                                                 </li>
                                             ))}
                                         </ul>
+                                        {solution.link && (
+                                            <div className="mt-6 relative z-10">
+                                                <button className="w-full bg-nijaGreen hover:bg-green-600 text-white py-2.5 px-4 rounded-lg font-semibold transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-md shadow-nijaGreen/20 hover:shadow-lg hover:shadow-nijaGreen/30">
+                                                    Explore Solution
+                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        )}
                                     </CardWrapper>
                                 </motion.div>
                             );
