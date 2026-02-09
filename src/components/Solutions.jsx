@@ -122,10 +122,10 @@ export function Solutions() {
                         >
                             {/* Icon & Title Row */}
                             <div className="flex items-center gap-4 mb-6">
-                                <div className={`p-3 rounded-xl bg-gray-50 dark:bg-white/5 w-fit flex-shrink-0 ${solution.color}`}>
+                                <div className={`p-3 rounded-xl bg-gray-50 dark:bg-white/5 w-fit flex-shrink-0 ${solution.color} transition-colors duration-300 group-hover:bg-${solution.baseColor} group-hover:text-white`}>
                                     <solution.icon size={32} strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                                <h3 className={`text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-${solution.baseColor}`}>
                                     {solution.title}
                                 </h3>
                             </div>
@@ -172,3 +172,7 @@ export function Solutions() {
 }
 
 export default Solutions;
+
+// Safelist for dynamic classes:
+// group-hover:bg-nijaGreen
+// group-hover:text-nijaGreen

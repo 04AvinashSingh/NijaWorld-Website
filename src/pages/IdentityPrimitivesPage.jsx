@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { AnimatedPageBackground } from '../components/AnimatedPageBackground';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
-import heroImg from '../assets/images/blockchain/tokenisation.png';
+import heroImg from '../assets/images/blockchain/identity.png';
 
-export default function TokenisationPage() {
+export default function IdentityPrimitivesPage() {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ export default function TokenisationPage() {
                 <div className="absolute inset-0 z-0">
                     <img
                         src={heroImg}
-                        alt="Tokenisation Background"
+                        alt="Identity Background"
                         className="w-full h-full object-cover opacity-80"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F14] via-[#141B28]/90 to-[#0B0F14]" />
@@ -35,7 +35,7 @@ export default function TokenisationPage() {
                             transition={{ duration: 0.4 }}
                             className="text-5xl md:text-6xl font-bold mb-6 font-heading text-white"
                         >
-                            <span className="text-nijaPurple">Tokenisation</span> for Asset Lifecycle
+                            Identity <span className="text-nijaPurple">Primitives</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ export default function TokenisationPage() {
                             transition={{ duration: 0.4, delay: 0.1 }}
                             className="text-xl text-gray-300 leading-relaxed mb-8 font-body"
                         >
-                            Manage asset and entitlement lifecycles with built-in governance controls. Digitize value with programmable rules.
+                            Credential verification and permissioning foundations. Own your identity and control your data.
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
@@ -58,11 +58,11 @@ export default function TokenisationPage() {
                                     whileHover={{ scale: 1.1, transition: { duration: 0.15 } }}
                                 />
                                 <button className="relative z-10 bg-nijaPurple hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaPurple/30 hover:shadow-nijaPurple/50">
-                                    Start Tokenisation
+                                    Create Identity
                                 </button>
                             </div>
                             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium transition hover:bg-white/10">
-                                View Solutions
+                                Learn about DID
                             </button>
                         </motion.div>
                     </div>
@@ -79,30 +79,30 @@ export default function TokenisationPage() {
                         className="mb-12"
                     >
                         <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white font-heading">
-                            Why Tokenise?
+                            Why Self-Sovereign Identity?
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Unlock liquidity, fractional ownership, and automated compliance.
+                            Move beyond passwords and centralized databases.
                         </p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                         {[
                             {
-                                title: 'Fractional Ownership',
-                                description: 'Divide high-value assets into tradable units to increase liquidity.'
+                                title: 'Privacy Preservation',
+                                description: 'Share only the necessary data (e.g., "Over 18") without revealing everything.'
                             },
                             {
-                                title: 'Automated Compliance',
-                                description: 'embed regulatory rules directly into the asset token logic.'
+                                title: 'Portable Reputation',
+                                description: 'Take your credentials and reputation across different platforms.'
                             },
                             {
-                                title: '24/7 Transferability',
-                                description: 'Enable continuous trading and settlement without banking hour limits.'
+                                title: 'Reduced Liability',
+                                description: 'Enterprises store fewer sensitive user details, reducing breach risk.'
                             },
                             {
-                                title: 'Reduced Intermediaries',
-                                description: 'Direct issuance and management cuts out costly middlemen.'
+                                title: 'Seamless Onboarding',
+                                description: 'Reusable KYC checks allow for instant account creation.'
                             }
                         ].map((outcome, idx) => (
                             <motion.div
@@ -147,35 +147,35 @@ export default function TokenisationPage() {
                             Key Features
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Enterprise-grade standards for digital asset management.
+                            Standards-compliant identity infrastructure.
                         </p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             {
-                                title: 'Asset Digitisation',
-                                description: 'Represent physical or digital assets as unique verifiable tokens.'
+                                title: 'DID Standards',
+                                description: 'W3C-compliant Decentralized Identifiers for people and things.'
                             },
                             {
-                                title: 'Lifecycle Mgmt',
-                                description: 'Full control over issuance, distribution, freezing, and burning.'
+                                title: 'Verifiable Creds',
+                                description: 'Cryptographically signed attestations (degrees, licenses, IDs).'
                             },
                             {
-                                title: 'Governance Rules',
-                                description: 'Configurable voting and dividend distribution mechanisms.'
+                                title: 'Access Control',
+                                description: 'Granular permissioning based on verified attributes.'
                             },
                             {
-                                title: 'Multi-Chain Support',
-                                description: 'Deploy assets across compatible blockchain networks.'
+                                title: 'Zero-Knowledge Proofs',
+                                description: 'Prove statements without revealing underlying data.'
                             },
                             {
-                                title: 'Metadata Enrichment',
-                                description: 'Store rich data on-chain or off-chain linked to the token.'
+                                title: 'Key Management',
+                                description: 'Secure recovery and management of cryptographic keys.'
                             },
                             {
-                                title: 'Wallet Integration',
-                                description: 'Compatible with standard enterprise and retail wallets.'
+                                title: 'Universal Resolver',
+                                description: 'Resolve identities across multiple blockchain networks.'
                             }
                         ].map((feature, idx) => (
                             <motion.div
@@ -213,17 +213,17 @@ export default function TokenisationPage() {
                             Use Cases
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Transforming asset management across sectors.
+                            Identity for the digital economy.
                         </p>
                     </motion.div>
 
                     <div className="space-y-4">
                         {[
-                            'Real Estate Fractionalisaton (RWA)',
-                            'Supply Chain Electronic Bill of Lading',
-                            'Loyalty Point Systems',
-                            'Carbon Credit Marketplace',
-                            'Private Equity Fund Tokenisation'
+                            'Reusable KYC for Banking',
+                            'Employee Badging & Access',
+                            'IoT Device Authentication',
+                            'Educational Certificate Verification',
+                            'Healthcare Patient Data Portability'
                         ].map((useCase, idx) => (
                             <motion.div
                                 key={idx}
@@ -259,10 +259,10 @@ export default function TokenisationPage() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl font-bold mb-4 font-heading">
-                            Ready to tokenise assets?
+                            Ready to secure digital identities?
                         </h2>
                         <p className="text-gray-300 mb-8 max-w-2xl mx-auto font-body text-lg">
-                            Explore our platform for secure and compliant asset tokenisation.
+                            Adopt a privacy-preserving identity strategy for your users.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <div className="relative group">
@@ -272,11 +272,11 @@ export default function TokenisationPage() {
                                     whileHover={{ scale: 1.1, transition: { duration: 0.15 } }}
                                 />
                                 <button className="relative z-10 bg-nijaPurple hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaPurple/30 hover:shadow-nijaPurple/50">
-                                    Launch Token
+                                    Start Pilot
                                 </button>
                             </div>
                             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium transition hover:bg-white/10">
-                                Contact Sales
+                                Contact Experts
                             </button>
                         </div>
                     </motion.div>

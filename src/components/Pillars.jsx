@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { LampContainer } from './ui/lamp';
 import { useState } from 'react';
 
@@ -17,7 +18,8 @@ export function Pillars() {
             gradient: 'from-nijaPurple/10 to-nijaPurple/5',
             icon: '/ai-brain-icon.png',
             isImage: true,
-            hasInteractive: true
+            hasInteractive: true,
+            link: '/technologies/ai'
         },
         {
             title: 'Blockchain',
@@ -33,7 +35,8 @@ export function Pillars() {
             gradient: 'from-nijaGreen/10 to-nijaGreen/5',
             icon: '/blockchain-shield-icon.png',
             isImage: true,
-            hasInteractive: true
+            hasInteractive: true,
+            link: '/technologies/blockchain'
         },
         {
             title: 'Cybersecurity',
@@ -49,7 +52,8 @@ export function Pillars() {
             gradient: 'from-nijaPurple/10 to-nijaPurple/5',
             icon: '/cyber-identity.png',
             isImage: true,
-            hasInteractive: true
+            hasInteractive: true,
+            link: '/technologies/cybersecurity'
         }
     ];
 
@@ -221,18 +225,15 @@ export function Pillars() {
                                         </div>
 
                                         {/* CTA */}
-                                        <motion.button
-                                            initial={{ opacity: 0 }}
-                                            whileInView={{ opacity: 1 }}
-                                            viewport={{ once: true }}
-                                            transition={{ delay: 1.5 }}
-                                            className={`mt-8 w-full px-6 py-3 rounded-lg font-medium transition-all hover:text-white hover:shadow-lg ${pillar.color === 'nijaPurple'
+                                        <Link
+                                            to={pillar.link}
+                                            className={`mt-8 w-full px-6 py-3 rounded-lg font-medium transition-all hover:text-white hover:shadow-lg block text-center ${pillar.color === 'nijaPurple'
                                                 ? 'bg-nijaPurple/10 hover:bg-nijaPurple text-nijaPurple border border-nijaPurple/30 hover:shadow-nijaPurple/50'
                                                 : 'bg-nijaGreen/10 hover:bg-nijaGreen text-nijaGreen border border-nijaGreen/30 hover:shadow-nijaGreen/50'
                                                 }`}
                                         >
                                             Explore {pillar.title} →
-                                        </motion.button>
+                                        </Link>
                                     </motion.div>
                                 );
                             };
@@ -300,18 +301,15 @@ export function Pillars() {
                                     </div>
 
                                     {/* CTA */}
-                                    <motion.button
-                                        initial={{ opacity: 0 }}
-                                        whileInView={{ opacity: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 1.5 }}
-                                        className={`mt-8 w-full px-6 py-3 rounded-lg font-medium transition-all hover:text-white hover:shadow-lg ${pillar.color === 'nijaPurple'
+                                    <Link
+                                        to={pillar.link}
+                                        className={`mt-8 w-full px-6 py-3 rounded-lg font-medium transition-all hover:text-white hover:shadow-lg block text-center ${pillar.color === 'nijaPurple'
                                             ? 'bg-nijaPurple/10 hover:bg-nijaPurple text-nijaPurple border border-nijaPurple/30 hover:shadow-nijaPurple/50'
                                             : 'bg-nijaGreen/10 hover:bg-nijaGreen text-nijaGreen border border-nijaGreen/30 hover:shadow-nijaGreen/50'
                                             }`}
                                     >
                                         Explore {pillar.title} →
-                                    </motion.button>
+                                    </Link>
                                 </motion.div>
                             );
 

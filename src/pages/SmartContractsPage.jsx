@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { AnimatedPageBackground } from '../components/AnimatedPageBackground';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
-import heroImg from '../assets/images/blockchain/tokenisation.png';
+import heroImg from '../assets/images/blockchain/smart_contracts.png';
 
-export default function TokenisationPage() {
+export default function SmartContractsPage() {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ export default function TokenisationPage() {
                 <div className="absolute inset-0 z-0">
                     <img
                         src={heroImg}
-                        alt="Tokenisation Background"
+                        alt="Smart Contracts Background"
                         className="w-full h-full object-cover opacity-80"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F14] via-[#141B28]/90 to-[#0B0F14]" />
@@ -35,7 +35,7 @@ export default function TokenisationPage() {
                             transition={{ duration: 0.4 }}
                             className="text-5xl md:text-6xl font-bold mb-6 font-heading text-white"
                         >
-                            <span className="text-nijaPurple">Tokenisation</span> for Asset Lifecycle
+                            <span className="text-nijaPurple">Smart Contracts</span> & Settlement
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ export default function TokenisationPage() {
                             transition={{ duration: 0.4, delay: 0.1 }}
                             className="text-xl text-gray-300 leading-relaxed mb-8 font-body"
                         >
-                            Manage asset and entitlement lifecycles with built-in governance controls. Digitize value with programmable rules.
+                            Automated, verifiable business logic that executes exactly as programmed. Remove ambiguity from multi-party agreements.
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
@@ -58,11 +58,11 @@ export default function TokenisationPage() {
                                     whileHover={{ scale: 1.1, transition: { duration: 0.15 } }}
                                 />
                                 <button className="relative z-10 bg-nijaPurple hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaPurple/30 hover:shadow-nijaPurple/50">
-                                    Start Tokenisation
+                                    Deploy Contracts
                                 </button>
                             </div>
                             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium transition hover:bg-white/10">
-                                View Solutions
+                                View Logic Patterns
                             </button>
                         </motion.div>
                     </div>
@@ -79,30 +79,30 @@ export default function TokenisationPage() {
                         className="mb-12"
                     >
                         <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white font-heading">
-                            Why Tokenise?
+                            Why Automate Logic?
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Unlock liquidity, fractional ownership, and automated compliance.
+                            Gain efficiency and trust through deterministic execution.
                         </p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                         {[
                             {
-                                title: 'Fractional Ownership',
-                                description: 'Divide high-value assets into tradable units to increase liquidity.'
+                                title: 'Instant Settlement',
+                                description: 'T+0 settlement cycles by combining clearing and settlement.'
                             },
                             {
-                                title: 'Automated Compliance',
-                                description: 'embed regulatory rules directly into the asset token logic.'
+                                title: 'Reduced Counterparty Risk',
+                                description: 'Atomic swaps ensure delivery-versus-payment (DvP) simultaneously.'
                             },
                             {
-                                title: '24/7 Transferability',
-                                description: 'Enable continuous trading and settlement without banking hour limits.'
+                                title: 'Lower Operational Costs',
+                                description: 'Remove reconciliation overhead between fragmented systems.'
                             },
                             {
-                                title: 'Reduced Intermediaries',
-                                description: 'Direct issuance and management cuts out costly middlemen.'
+                                title: 'Guaranteed Execution',
+                                description: 'Code runs on a decentralized network, immune to single-point tampering.'
                             }
                         ].map((outcome, idx) => (
                             <motion.div
@@ -147,35 +147,35 @@ export default function TokenisationPage() {
                             Key Features
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Enterprise-grade standards for digital asset management.
+                            Flexible frameworks for describing complex business rules.
                         </p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             {
-                                title: 'Asset Digitisation',
-                                description: 'Represent physical or digital assets as unique verifiable tokens.'
+                                title: 'Auto-Execution',
+                                description: 'Triggers automatically based on time, events, or data inputs.'
                             },
                             {
-                                title: 'Lifecycle Mgmt',
-                                description: 'Full control over issuance, distribution, freezing, and burning.'
+                                title: 'Trustless Settlement',
+                                description: 'Exchange assets without needing a trusted central intermediary.'
                             },
                             {
-                                title: 'Governance Rules',
-                                description: 'Configurable voting and dividend distribution mechanisms.'
+                                title: 'Logic Documentation',
+                                description: 'The code itself serves as the living, executable contract.'
                             },
                             {
-                                title: 'Multi-Chain Support',
-                                description: 'Deploy assets across compatible blockchain networks.'
+                                title: 'Multi-Sig Governance',
+                                description: 'Require multiple approvals for high-value contract interactions.'
                             },
                             {
-                                title: 'Metadata Enrichment',
-                                description: 'Store rich data on-chain or off-chain linked to the token.'
+                                title: 'Oracle Integration',
+                                description: 'Connect on-chain logic to real-world data (prices, weather, IoT).'
                             },
                             {
-                                title: 'Wallet Integration',
-                                description: 'Compatible with standard enterprise and retail wallets.'
+                                title: 'Formal Verification',
+                                description: 'Mathematically prove contract correctness before deployment.'
                             }
                         ].map((feature, idx) => (
                             <motion.div
@@ -213,17 +213,17 @@ export default function TokenisationPage() {
                             Use Cases
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Transforming asset management across sectors.
+                            From financial derivatives to automated insurance.
                         </p>
                     </motion.div>
 
                     <div className="space-y-4">
                         {[
-                            'Real Estate Fractionalisaton (RWA)',
-                            'Supply Chain Electronic Bill of Lading',
-                            'Loyalty Point Systems',
-                            'Carbon Credit Marketplace',
-                            'Private Equity Fund Tokenisation'
+                            'Automated Escrow Services',
+                            'Parametric Insurance Payouts',
+                            'Royalty Distribution for IP',
+                            'Decentralized Autonomous Organizations (DAOs)',
+                            'Supply Chain Payment Release'
                         ].map((useCase, idx) => (
                             <motion.div
                                 key={idx}
@@ -259,10 +259,10 @@ export default function TokenisationPage() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl font-bold mb-4 font-heading">
-                            Ready to tokenise assets?
+                            Ready to automate your business?
                         </h2>
                         <p className="text-gray-300 mb-8 max-w-2xl mx-auto font-body text-lg">
-                            Explore our platform for secure and compliant asset tokenisation.
+                            Design and deploy secure smart contracts for your enterprise.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <div className="relative group">
@@ -272,11 +272,11 @@ export default function TokenisationPage() {
                                     whileHover={{ scale: 1.1, transition: { duration: 0.15 } }}
                                 />
                                 <button className="relative z-10 bg-nijaPurple hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaPurple/30 hover:shadow-nijaPurple/50">
-                                    Launch Token
+                                    Start Building
                                 </button>
                             </div>
                             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium transition hover:bg-white/10">
-                                Contact Sales
+                                Contact Engineering
                             </button>
                         </div>
                     </motion.div>

@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { AnimatedPageBackground } from '../components/AnimatedPageBackground';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
-import heroImg from '../assets/images/blockchain/tokenisation.png';
+import heroImg from '../assets/images/ai/infrastructure.png';
 
-export default function TokenisationPage() {
+export default function InfrastructureIntelligencePage() {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ export default function TokenisationPage() {
                 <div className="absolute inset-0 z-0">
                     <img
                         src={heroImg}
-                        alt="Tokenisation Background"
+                        alt="Infrastructure Intelligence Background"
                         className="w-full h-full object-cover opacity-80"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F14] via-[#141B28]/90 to-[#0B0F14]" />
@@ -35,7 +35,7 @@ export default function TokenisationPage() {
                             transition={{ duration: 0.4 }}
                             className="text-5xl md:text-6xl font-bold mb-6 font-heading text-white"
                         >
-                            <span className="text-nijaPurple">Tokenisation</span> for Asset Lifecycle
+                            Infrastructure <span className="text-nijaGreen">Intelligence</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ export default function TokenisationPage() {
                             transition={{ duration: 0.4, delay: 0.1 }}
                             className="text-xl text-gray-300 leading-relaxed mb-8 font-body"
                         >
-                            Manage asset and entitlement lifecycles with built-in governance controls. Digitize value with programmable rules.
+                            Achieve unmatched reliability, observability, and operational optimisation. AI that keeps your digital backbone resilient and efficient.
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
@@ -53,16 +53,16 @@ export default function TokenisationPage() {
                         >
                             <div className="relative group">
                                 <motion.div
-                                    className="absolute inset-0 bg-nijaPurple rounded-lg blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-150"
+                                    className="absolute inset-0 bg-nijaGreen rounded-lg blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-150"
                                     initial={{ scale: 0.8 }}
                                     whileHover={{ scale: 1.1, transition: { duration: 0.15 } }}
                                 />
-                                <button className="relative z-10 bg-nijaPurple hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaPurple/30 hover:shadow-nijaPurple/50">
-                                    Start Tokenisation
+                                <button className="relative z-10 bg-nijaGreen hover:bg-green-500 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaGreen/30 hover:shadow-nijaGreen/50">
+                                    Optimise Infrastructure
                                 </button>
                             </div>
                             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium transition hover:bg-white/10">
-                                View Solutions
+                                View Capabilities
                             </button>
                         </motion.div>
                     </div>
@@ -79,30 +79,30 @@ export default function TokenisationPage() {
                         className="mb-12"
                     >
                         <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white font-heading">
-                            Why Tokenise?
+                            Why Intelligence Matters?
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Unlock liquidity, fractional ownership, and automated compliance.
+                            Move from reactive maintenance to proactive optimisation.
                         </p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                         {[
                             {
-                                title: 'Fractional Ownership',
-                                description: 'Divide high-value assets into tradable units to increase liquidity.'
+                                title: 'Maximized Uptime',
+                                description: 'Predict and prevent outages before they impact users.'
                             },
                             {
-                                title: 'Automated Compliance',
-                                description: 'embed regulatory rules directly into the asset token logic.'
+                                title: 'Cost Efficiency',
+                                description: 'Dynamically allocate resources to match demand, eliminating waste.'
                             },
                             {
-                                title: '24/7 Transferability',
-                                description: 'Enable continuous trading and settlement without banking hour limits.'
+                                title: 'Faster Root Cause Analysis',
+                                description: 'AI-driven correlation identifies issues in seconds, not hours.'
                             },
                             {
-                                title: 'Reduced Intermediaries',
-                                description: 'Direct issuance and management cuts out costly middlemen.'
+                                title: 'Operational Visibility',
+                                description: 'Single-pane-of-glass view into hybrid and multi-cloud environments.'
                             }
                         ].map((outcome, idx) => (
                             <motion.div
@@ -112,12 +112,12 @@ export default function TokenisationPage() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: idx * 0.1 }}
                                 whileHover={{ y: -4, transition: { duration: 0.15 } }}
-                                className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-8 hover:border-nijaPurple dark:hover:border-nijaPurple hover:shadow-xl hover:shadow-nijaPurple/10 transition-all duration-150"
+                                className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-8 hover:border-nijaGreen dark:hover:border-nijaGreen hover:shadow-xl hover:shadow-nijaGreen/10 transition-all duration-150"
                             >
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-3 h-3 rounded-full bg-nijaPurple mt-2" />
+                                    <div className="flex-shrink-0 w-3 h-3 rounded-full bg-nijaGreen mt-2" />
                                     <div>
-                                        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-nijaPurple transition-colors duration-150">
+                                        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-nijaGreen transition-colors duration-150">
                                             {outcome.title}
                                         </h3>
                                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -140,42 +140,42 @@ export default function TokenisationPage() {
                         viewport={{ once: true }}
                         className="mb-12"
                     >
-                        <span className="inline-block mb-6 px-4 py-1.5 text-sm font-medium rounded-full bg-nijaPurple/10 text-nijaPurple uppercase tracking-wide">
+                        <span className="inline-block mb-6 px-4 py-1.5 text-sm font-medium rounded-full bg-nijaGreen/10 text-nijaGreen uppercase tracking-wide">
                             Core Capabilities
                         </span>
                         <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white font-heading">
                             Key Features
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Enterprise-grade standards for digital asset management.
+                            Intelligence embedded into every layer of your stack.
                         </p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             {
-                                title: 'Asset Digitisation',
-                                description: 'Represent physical or digital assets as unique verifiable tokens.'
+                                title: 'Predictive Scaling',
+                                description: 'Forecast traffic spikes and scale infrastructure proactively.'
                             },
                             {
-                                title: 'Lifecycle Mgmt',
-                                description: 'Full control over issuance, distribution, freezing, and burning.'
+                                title: 'Log Analysis',
+                                description: 'Real-time anomaly detection across terabytes of log data.'
                             },
                             {
-                                title: 'Governance Rules',
-                                description: 'Configurable voting and dividend distribution mechanisms.'
+                                title: 'Cost Optimisation',
+                                description: 'Identify idle resources and recommend rightsizing actions.'
                             },
                             {
-                                title: 'Multi-Chain Support',
-                                description: 'Deploy assets across compatible blockchain networks.'
+                                title: 'Self-Healing Systems',
+                                description: 'Automated remediation scripts triggered by specific alerts.'
                             },
                             {
-                                title: 'Metadata Enrichment',
-                                description: 'Store rich data on-chain or off-chain linked to the token.'
+                                title: 'Security Posture Monitoring',
+                                description: 'Continuous scanning for configuration drift and vulnerabilities.'
                             },
                             {
-                                title: 'Wallet Integration',
-                                description: 'Compatible with standard enterprise and retail wallets.'
+                                title: 'Capacity Planning',
+                                description: 'Data-driven forecasting for future hardware and cloud needs.'
                             }
                         ].map((feature, idx) => (
                             <motion.div
@@ -185,10 +185,10 @@ export default function TokenisationPage() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: idx * 0.07 }}
                                 whileHover={{ y: -4, scale: 1.02, transition: { duration: 0.15 } }}
-                                className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 border border-gray-200 dark:border-gray-800 rounded-xl p-8 hover:border-nijaPurple dark:hover:border-nijaPurple hover:shadow-xl hover:shadow-nijaPurple/10 transition-all duration-150 relative overflow-hidden"
+                                className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 border border-gray-200 dark:border-gray-800 rounded-xl p-8 hover:border-nijaGreen dark:hover:border-nijaGreen hover:shadow-xl hover:shadow-nijaGreen/10 transition-all duration-150 relative overflow-hidden"
                             >
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-nijaPurple/5 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity duration-150 opacity-0 group-hover:opacity-100" />
-                                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-nijaPurple transition-colors duration-150 relative z-10">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-nijaGreen/5 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity duration-150 opacity-0 group-hover:opacity-100" />
+                                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-nijaGreen transition-colors duration-150 relative z-10">
                                     {feature.title}
                                 </h3>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed relative z-10">
@@ -213,17 +213,17 @@ export default function TokenisationPage() {
                             Use Cases
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Transforming asset management across sectors.
+                            Operational excellence for modern enterprises.
                         </p>
                     </motion.div>
 
                     <div className="space-y-4">
                         {[
-                            'Real Estate Fractionalisaton (RWA)',
-                            'Supply Chain Electronic Bill of Lading',
-                            'Loyalty Point Systems',
-                            'Carbon Credit Marketplace',
-                            'Private Equity Fund Tokenisation'
+                            'High-Traffic E-commerce Scalability',
+                            'Financial Services Real-time Transaction Monitoring',
+                            'Cloud Cost Management & Reduction',
+                            'Incident Response Automation',
+                            'Multi-Cloud Governance'
                         ].map((useCase, idx) => (
                             <motion.div
                                 key={idx}
@@ -232,15 +232,15 @@ export default function TokenisationPage() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: idx * 0.08 }}
                                 whileHover={{ x: 6, transition: { duration: 0.15 } }}
-                                className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-nijaPurple dark:hover:border-nijaPurple transition-all duration-150"
+                                className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-nijaGreen dark:hover:border-nijaGreen transition-all duration-150"
                             >
                                 <div className="flex items-center gap-4">
-                                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-nijaPurple/10 flex items-center justify-center group-hover:bg-nijaPurple transition-colors duration-150">
-                                        <svg className="w-5 h-5 text-nijaPurple group-hover:text-white transition-colors duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-nijaGreen/10 flex items-center justify-center group-hover:bg-nijaGreen transition-colors duration-150">
+                                        <svg className="w-5 h-5 text-nijaGreen group-hover:text-white transition-colors duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <p className="text-gray-900 dark:text-white font-medium group-hover:text-nijaPurple transition-colors duration-150">
+                                    <p className="text-gray-900 dark:text-white font-medium group-hover:text-nijaGreen transition-colors duration-150">
                                         {useCase}
                                     </p>
                                 </div>
@@ -259,24 +259,24 @@ export default function TokenisationPage() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl font-bold mb-4 font-heading">
-                            Ready to tokenise assets?
+                            Ready to optimise your infrastructure?
                         </h2>
                         <p className="text-gray-300 mb-8 max-w-2xl mx-auto font-body text-lg">
-                            Explore our platform for secure and compliant asset tokenisation.
+                            Get a free assessment of your current operational efficiency.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <div className="relative group">
                                 <motion.div
-                                    className="absolute inset-0 bg-nijaPurple rounded-lg blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-150"
+                                    className="absolute inset-0 bg-nijaGreen rounded-lg blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-150"
                                     initial={{ scale: 0.8 }}
                                     whileHover={{ scale: 1.1, transition: { duration: 0.15 } }}
                                 />
-                                <button className="relative z-10 bg-nijaPurple hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaPurple/30 hover:shadow-nijaPurple/50">
-                                    Launch Token
+                                <button className="relative z-10 bg-nijaGreen hover:bg-green-500 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaGreen/30 hover:shadow-nijaGreen/50">
+                                    Get Assesment
                                 </button>
                             </div>
                             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium transition hover:bg-white/10">
-                                Contact Sales
+                                Contact DevOps Team
                             </button>
                         </div>
                     </motion.div>
